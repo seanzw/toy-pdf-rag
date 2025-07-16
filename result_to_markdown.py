@@ -12,10 +12,15 @@ def json_to_markdown_list(json_data):
             # 清理问题文本中的多余空格
             clean_question = " ".join(answer["question"].split())
             clean_explanation = " ".join(answer["explanation"].split())
+
+            # 清理quote
+            clean_quote = " ".join(answer.get("quote", "").split()) if "quote" in answer else ""
             
             md_output += (
                 f"**{answer['total_question_idx']}. {clean_question}**\n\n"
                 f"- **Answer**: {'✅ Yes' if answer['answer'] == 1 else '❌ No'}\n"
+                f"- **Page Number**: {answer['page_number']}\n"
+                f"- **Quote**: {clean_quote}\n"
                 f"- **Explanation**: {clean_explanation}\n\n"
             )
     
@@ -42,10 +47,15 @@ def json_to_markdown_with_think(json_data):
             
             # 清理解释文本
             clean_explanation = " ".join(answer["explanation"].split())
+
+            # 清理quote
+            clean_quote = " ".join(answer.get("quote", "").split()) if "quote" in answer else ""
             
             md_output += (
                 f"**{answer['total_question_idx']}. {clean_question}**\n\n"
                 f"- **Answer**: {'✅ Yes' if answer['answer'] == 1 else '❌ No'}\n"
+                f"- **Page Number**: {answer['page_number']}\n"
+                f"- **Quote**: {clean_quote}\n"
                 f"- **Explanation**: {clean_explanation}\n\n"
             )
     
