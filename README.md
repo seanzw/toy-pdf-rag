@@ -16,7 +16,7 @@ This single, step-by-step section shows how to set up and run the tool on a fres
 ```powershell
 ollama pull dengcao/Qwen3-Embedding-0.6B:F16
 ```
-    - This downloads the local retrieval/embedding model the project uses.
+This downloads the local retrieval/embedding model the project uses.
 
 3) Install Python and add it to PATH
     - Download the latest Python 3 installer for Windows from https://www.python.org/downloads/windows/.
@@ -36,20 +36,23 @@ python --version
     - Or, in File Explorer, hold Shift, right-click the folder background and choose **Open PowerShell window here** (or **Open in Terminal**, then choose PowerShell).
 
 5) Create and activate a Python virtual environment named `pdf-rag`
-    - In the PowerShell window that is already in the project folder, run:
+In the PowerShell window that is already in the project folder, run:
 ```powershell
 python -m venv pdf-rag
 ```
-    - Activate the venv:
+
+Activate the venv:
 ```powershell
 .\pdf-rag\Scripts\Activate.ps1
 ```
-    - If PowerShell blocks script execution, allow local scripts (you may need to run PowerShell as administrator for this command the first time):
+
+If PowerShell blocks script execution, allow local scripts (you may need to run PowerShell as administrator for this command the first time):
 ```powershell
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 .\pdf-rag\Scripts\Activate.ps1
 ```
-    - (If you prefer Command Prompt instead of PowerShell, activate with `.
+
+(If you prefer Command Prompt instead of PowerShell, activate with `.
 pdf-rag\Scripts\activate`.)
 
 6) Install required Python packages
@@ -64,7 +67,8 @@ pip install -r requirements.txt
 ```python
 API_KEY = "your_api_key_here"
 ```
-    - Note: If you plan to run reasoning locally with Ollama models, you do not need an API key.
+
+Note: If you plan to run reasoning locally with Ollama models, you do not need an API key.
 
 How to run the analyzer (every time you use the tool)
  - 1) Start the Ollama retrieval model (keep this running):
