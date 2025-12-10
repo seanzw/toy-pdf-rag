@@ -1,5 +1,5 @@
 from langchain_community.document_loaders import PyPDFLoader
-from langchain.prompts import PromptTemplate
+from langchain_core.prompts import PromptTemplate
 from langchain_community.vectorstores import DocArrayInMemorySearch
 from langchain_community.retrievers import BM25Retriever
 from langchain_core.runnables import RunnablePassthrough

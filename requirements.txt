@@ -1,0 +1,10 @@
+langchain
+langchain-core
+langchain-community
+langchain-ollama
+langchain-deepseek
+docarray
+pandas
+openpyxl
+rank_bm25
+pypdf
