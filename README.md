@@ -12,11 +12,14 @@ This single, step-by-step section shows how to set up and run the tool on a fres
 
 2) Install Ollama and pull the retrieval model
     - Download and install Ollama from https://ollama.com/ (choose the Windows installer). Follow the installer prompts.
+    - Important: use Ollama **v11.6**. Starting from Ollama v12, some models (including `dengcao/Qwen3-Embedding-0.6B:F16`) may report "this model does not support embeddings". To avoid that issue, download and install Ollama v11.6 from the official releases page:
+      https://github.com/ollama/ollama/releases
+      Find **v11.6**, open the assets for that release, and download `OllamaSetup.exe`.
     - After installation, open PowerShell and run:
 ```powershell
 ollama pull dengcao/Qwen3-Embedding-0.6B:F16
 ```
-This downloads the local retrieval/embedding model the project uses.
+    - This downloads the local retrieval/embedding model the project uses. If you see an error complaining the model doesn't support embeddings, check your Ollama version and reinstall v11.6 as described above.
 
 3) Install Python and add it to PATH
     - Download the latest Python 3 installer for Windows from https://www.python.org/downloads/windows/.
